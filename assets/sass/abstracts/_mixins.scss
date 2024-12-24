@@ -1,0 +1,47 @@
+/* Start   <======>  Flex Mixin <======>  */
+@mixin flex($justify, $align, $direction: row, $gap: 10px) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+
+  @if $justify == center {
+    gap: $gap;
+  }
+
+  @if $direction == column {
+    flex-direction: $direction;
+    gap: $gap;
+  }
+}
+/* End     <======>  Flex Mixin <======>  */
+
+/* Start   <======>  Grid Mixin <======>  */
+@mixin grid($tempCol, $gap: 10px) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($tempCol, 1fr));
+  gap: $gap;
+}
+/* End     <======>  Grid Mixin <======>  */
+
+/* Start     <======>  Absolute Mixin <======>  */
+@mixin absoluteTop($top: 50%, $left: 50%, $transX: -50%, $transY: -50%) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  transform: translate($transX, $transY);
+}
+
+@mixin absoluteBottom($bottom: 50%, $left: 50%, $transX: -50%, $transY: -50%) {
+  position: absolute;
+  bottom: $bottom;
+  left: $left;
+
+  @if $bottom == 50% {
+    transform: translateY($transY);
+  }
+
+  @if $left == 50% {
+    transform: translateX($transX);
+  }
+}
+/* End     <======>  Absolute Mixin <======>  */

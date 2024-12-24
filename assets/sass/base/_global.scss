@@ -1,0 +1,62 @@
+/* Start <=====> Global Styles <=====> */
+* {
+  padding: 0;
+  margin: 0;
+  body {
+    direction: rtl;
+    font-family: $regular_font;
+    &::-webkit-scrollbar {
+      width: 10px;
+      transition: var(--main_transition);
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #888;
+      border-radius: 10px;
+      border: 2px solid #f1f1f1;
+      transition: var(--main_transition);
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background-color: #000;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--dark);
+  }
+}
+
+/* End   <=====> Global Styles <=====> */
+
+/* Start <=====> Container Style <=====> */
+.container {
+  padding: 0 6rem;
+  margin: 0 6rem;
+
+  @media (max-width: 1280px) {
+    padding: 0 4rem;
+    margin: 0 4rem;
+  }
+
+  @media (max-width: 992px) {
+    padding: 0 3rem;
+    margin: 0 3rem;
+  }
+
+  @media (max-width: 640px) {
+    padding: 0 2rem;
+    margin: 0 2rem;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 1rem;
+    margin: 0;
+  }
+}
+/* End   <=====> Container Style <=====> */
